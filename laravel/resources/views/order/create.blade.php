@@ -10,7 +10,7 @@
                 <div class="form-group mt-2">
                     <label for="customer_id">Select Customer</label>
                     <select name="customer_id" id="customer_id" class="form-select">
-                        <option selected disabled hidden="true">Select customer</option>
+                        <option selected disabled hidden="true">Customer name</option>
                         @foreach ($customers as $customerId => $customer)
                             <option value="{{$customer->id}}">{{$customer->fullname}}</option>
                         @endforeach
@@ -23,9 +23,9 @@
                 <div class="form-group mt-2">
                     <label for="vehicle_id">Select Vehicle</label>
                     <select name="vehicle_id" id="vehicle_id" class="form-select">
-                        <option selected disabled hidden="true">Select vehicle</option>
+                        <option selected disabled hidden="true">Vehicle ID to order</option>
                         @foreach ($vehicles as $vehicle)
-                            <option value="{{ $vehicle->id }}">
+                            <option value="{{ $vehicle->id }}" aria-placeholder="refer to vehicle page">
                                 {{ $vehicle->id }}
                             </option>
                         @endforeach

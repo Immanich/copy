@@ -8,28 +8,28 @@
             @csrf
             <div class="form-group mt-2">
                 <label for="fullname">Name</label>
-                <input type="text" name="fullname" class="form-control" autocomplete>
+                <input type="text" name="fullname" class="form-control" placeholder="Enter your name" autocomplete>
                 @error('fullname')
                     <p class="text-danger">{{$message}}</p>
                 @enderror
             </div>
             <div class="form-group mt-2">
                 <label for="email">Email</label>
-                <input type="email" name="email" class="form-control" autocomplete>
+                <input type="email" name="email" class="form-control" placeholder="Enter your email" autocomplete>
                 @error('email')
                     <p class="text-danger">{{$message}}</p>
                 @enderror
             </div>
             <div class="form-group mt-2">
                 <label for="address">Address</label>
-                <input type="address" name="address" class="form-control" autocomplete>
+                <input type="address" name="address" class="form-control" placeholder="Enter your address" autocomplete>
                 @error('address')
                     <p class="text-danger">{{$message}}</p>
                 @enderror
             </div>
             <div class="form-group mt-2">
                 <label for="phoneNumber">Phone Number</label>
-                <input type="tel" name="phoneNumber" class="form-control" patterm="[0-9]{11}" autocomplete>
+                <input type="tel" name="phoneNumber" class="form-control" patterm="[0-9]{11}" placeholder="Enter 11 digits" autocomplete>
                 @error('phoneNumber')
                     <p class="text-danger">{{$message}}</p>
                 @enderror
